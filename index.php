@@ -62,9 +62,13 @@
     </body>
 </html>
 <script>
+  var toolbarOptions = [['bold', 'italic', 'underline'], ['link']];
   var quill = new Quill('#editor', {
     theme: 'snow',
     placeholder: 'Write here...',
+    modules: {
+        toolbar: toolbarOptions
+    }
   });
 
   $(function(){
