@@ -27,8 +27,8 @@ switch($method){
         $email_form->setField("recipients", $recipients);
         //TODO: process the content, finish email, display the modal report
         //finish email
+        $email_result = Email::sendEmail($emailForm);
         
-        var_dump($email_form);
         die;
         break;
     case "GET":

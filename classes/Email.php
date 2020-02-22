@@ -16,6 +16,9 @@ use PHPMailer\PHPMailer\Exception;
 
 class Email
 {
+
+    public $failed_emails = [];
+
     public static function sendEmail(EmailForm $emailForm)
     {
         $recipients = $emailForm->getField("recipients")["val"];
@@ -23,30 +26,44 @@ class Email
         $from = $emailForm->getField("from")["val"];
         $from_email = $emailForm->getField("from_email")["val"];
         //attachment
-        $body = $emailForm->getField("content");
+        $body = $emailForm->getField("content")["val"];
+
+        //for the report
+        $success = 0;
+        $failure = 0;
 
         foreach($recipients as $recipient){
-            self::send($subject, $from, $from_email, $recipient, $body);
+            if(self::send($subject, $from, $from_email, $recipient, $body)){
+                $success++;
+            } else {
+                $failure++;
+            }
         }
-    }
-
-    public static function prepareEmailBody($body, $recipient) {
-
+        return [$success, $failure, $failed_emails];
     }
     
     private static function send($subject, $from, $from_email, $recipient, $body) {
+        $html_body = $body[0];
+        $text_body = $body[1];
+
         $mail = new PHPMailer(true);
         try {
             $mail->setFrom('mskang15@gmail.com', 'Moon Test');
 //            $mail->setFrom($from_email, $from);
             $mail->addAddress($recipient["email_address"], $recipient["name"]);
-            $mail->isHTML(false);
+            $mail->isHTML(true);
             $mail->Subject = $subject;
-            $mail->Body = $body;
-            $mail->send();
+            $mail->Body = $html_body;
+            $mail->AltBody = $text_body;
+            if(!$mail->send()){
+                // throw new Exception("something went wrong with sending the email");
+                $this->$failed_emails[] = $recipient["email_address"];
+                return false;
+            }
+            return true;
 
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
         }
     }
 

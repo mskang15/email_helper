@@ -25,11 +25,11 @@
                     </div>
                     <div class="form-group">
                         <label for="from">From</label>
-                        <input type="text" class="form-control" id="from" name="from" placeholder="Write From" required>
+                        <input type="text" class="form-control" id="from" name="from" placeholder="Write Sender's name" required>
                     </div>
                     <div class="form-group">
                         <label for="from_email">From Email</label>
-                        <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write From Email" required>
+                        <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write Sender's email" required>
                     </div>
                     <div class="form-group" style="float:left;">
                         <label for="recipients">Recipients</label>
