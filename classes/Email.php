@@ -67,5 +67,9 @@ class Email
         }
     }
 
+    public static function createEmailReport($report_array) {
+
+    }
+
 
 }
