@@ -1,7 +1,6 @@
 <?php
 $cwd = $_SERVER["DOCUMENT_ROOT"];
 set_include_path("$cwd" . PATH_SEPARATOR);
-
 ?>
 <html>
     <head>

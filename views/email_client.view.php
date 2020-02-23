@@ -10,15 +10,15 @@
     <form id="email_form">
         <div class="form-group">
             <label for="subject">Subject</label>
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Write Subject" required>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Write Subject" required autocomplete="off">
         </div>
         <div class="form-group">
             <label for="from">From</label>
-            <input type="text" class="form-control" id="from" name="from" placeholder="Write Sender's name" required>
+            <input type="text" class="form-control" id="from" name="from" placeholder="Write Sender's name" required required autocomplete="off">
         </div>
         <div class="form-group">
             <label for="from_email">From Email</label>
-            <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write Sender's email" required>
+            <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write Sender's email" required required autocomplete="off">
         </div>
         <div class="form-group" style="float:left;">
             <label for="recipients">Recipients</label>
