@@ -1,3 +1,8 @@
+<?php
+$cwd = $_SERVER["DOCUMENT_ROOT"];
+set_include_path("$cwd" . PATH_SEPARATOR);
+
+?>
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -57,6 +62,8 @@
                 </form>
             </div>
 
+            <?php var_dump(get_include_path()); ?>
+            <?php var_dump($_SERVER["DOCUMENT_ROOT"]); ?>
             <?php include_once 'views/modals.php'; ?>
         </main>
     </body>

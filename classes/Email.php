@@ -6,9 +6,10 @@
  * Date: 2/21/20
  * Time: 1:58 PM
  */
-require_once '../lib/Phpmailer/src/PHPMailer.php';
-require_once '../lib/Phpmailer/src/SMTP.php';
-require_once '../lib/Phpmailer/src/Exception.php';
+
+require_once __DIR__ . '/../lib/Phpmailer/src/PHPMailer.php';
+require_once __DIR__ . '/../lib/Phpmailer/src/SMTP.php';
+require_once __DIR__ . '/../lib/Phpmailer/src/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -43,24 +44,31 @@ class Email
         return $email_result_arr;
     }
     
-    private static function send($subject, $from, $from_email, $recipient, $body) {
+    public static function send($subject, $from, $from_email, $recipient, $body) {
         $html_body = $body[0];
         $text_body = $body[1];
 
         $mail = new PHPMailer(true);
+
         try {
             $mail->setFrom('mskang15@gmail.com', 'Moon Test');
 //            $mail->setFrom($from_email, $from);
+            $mail->SMTPAuth = false;
+            $mail->SMTPAutoTLS = false;
             $mail->addAddress($recipient["email_address"], $recipient["name"]);
             $mail->isHTML(true);
             $mail->Subject = $subject;
             $mail->Body = $html_body;
             $mail->AltBody = $text_body;
-            if(!$mail->send()){
+            error_log(print_r($mail, true));
+            if(!$res = $mail->send()){
+                error_log("not sent!");
                 // throw new Exception("something went wrong with sending the email");
                 // $this->$failed_emails[] = $recipient["email_address"];
                 return false;
             }
+            error_log($res);
+            error_log("sent!");
             return true;
 
         } catch (Exception $e) {
