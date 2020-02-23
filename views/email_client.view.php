@@ -99,5 +99,9 @@
                 }
             });
         });
+
+//        var formdata = $("#apif-download-form").serialize();
+//        var geturl = '/api/v2.0/modules/settings_update_author_list/export-to-csv.csv?' + formdata;
+//        $("body").append("<iframe src='" + geturl + "' style='display: none;' ></iframe>");
     });
 </script>

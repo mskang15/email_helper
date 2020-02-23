@@ -1,15 +1,11 @@
 <?php
-//define("BASE_PATH", dirname(__FILE__));
-//define('ROOT_PATH', dirname(__DIR__) . '/');
-//$cwd = $_SERVER["DOCUMENT_ROOT"];
-//set_include_path("$cwd" . PATH_SEPARATOR . get_include_path());
-
-//set_include_path("$cwd" . PATH_SEPARATOR);
 
 require_once 'autoload.php';
 require_once 'functions/functions.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
+
+//list($me, $myid, $other) = preg_split("/\//", $action, 3);
 
 switch($method){
     case "POST":
@@ -31,7 +27,7 @@ switch($method){
         }
         
         $email_form->setField("recipients", $recipients);
-        //TODO: process the content, finish email, display the modal report
+        //TODO: display the modal report
         //finish email
         $email_result_arr = Email::sendEmail($email_form);
         $resultarray = Email::generateResultArrayForEmailReport($email_result_arr);
