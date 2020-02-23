@@ -19,8 +19,8 @@ class InputValidation
         $required_fields = ["subject", "content", "recipients", "from_email", "from"];
         foreach($required_fields as $field){
             $field_obj = $email_form->getField($field);
-            if($field_obj["type"] === "file" || $field_obj["type"] === "csv"){
-                if(empty($field_obj["val"])){
+            if($field_obj["type"] === "file" || $field_obj["type"] === "csv" || $field === "content") {
+                if (empty($field_obj["val"])) {
                     $error_arr[] = $field . " is missing";
                 }
             } else {

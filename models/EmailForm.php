@@ -43,7 +43,7 @@ class EmailForm
         foreach($post as $key => $val) {
             if($key === "content"){
                 $val = Quill::generateHtmlWithText($val);
-                $this->$key["val"] = trim($val);
+                $this->$key["val"] = $val;
             } else {
                 $this->$key["val"] = trim($val);
             }

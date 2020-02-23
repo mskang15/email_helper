@@ -13,12 +13,6 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 switch($method){
     case "POST":
-        $headers = "From: mskang15@gmail.com" . "\r\n";
-//        mail("kangmoonseok@yahoo.com", "test subject", "test message",  $headers);
-//        die;
-        Email::send("test subject", "sadf", "kangmooonseok@yahoo.com", ["name"=> "test user", "email_address"=>"kangmooonseok@yahoo.com"], ["<div>adsf</div>", "asdfads"]);
-
-            die;
         $email_form = new EmailForm($_POST, $_FILES);
         $error_arr = InputValidation::validate($email_form);
         if(!empty($_FILES["recipients"])) {
@@ -39,8 +33,8 @@ switch($method){
         $email_form->setField("recipients", $recipients);
         //TODO: process the content, finish email, display the modal report
         //finish email
-        $email_result_arr = Email::sendEmail($emailForm);
-        $resultarray = Email::generateEmailReport($email_result_arr);
+        $email_result_arr = Email::sendEmail($email_form);
+        $resultarray = Email::generateResultArrayForEmailReport($email_result_arr);
         apiResponse($resultarray, "csv", 200);
         break;
     case "GET":

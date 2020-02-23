@@ -227,6 +227,45 @@ function apiResponse($result_array, $r, $code = NULL, $error = NULL)
     }
 }
 
+/**
+ * Convert an array to CVS format
+ *
+ * @param array $array
+ * @param string $delimiter
+ * @return null|string
+ */
+function array2csv(array &$array, $delimiter = ",")
+{
+    if (count($array) == 0) {
+        return NULL;
+    }
+
+    ob_start();
+    $df = fopen("php://output", 'w');
+    fputcsv($df, array_keys(reset($array)), $delimiter);
+    foreach ($array as $row) {
+        $row_array = array();
+        foreach ($row as $key => $val) {
+            if (is_array($val)) {
+                array_push($row_array, count($val) > 0 ? json_encode($val) : "");
+            } else {
+                array_push($row_array, $val);
+            }
+        }
+
+        fputcsv($df, $row_array, $delimiter);
+    }
+
+    fclose($df);
+    return ob_get_clean();
+}
+
+/**
+ * validate email
+ *
+ * @param email $email
+ * @return bool
+ */
 function validateEmail($email) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         return false;

@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="process_form.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="process_form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding>
                 <element signature="e#6#47#0#PHP" expanded="true" />
               </folding>
@@ -34,19 +34,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-              <folding>
-                <marker date="1582437134612" expanded="false" signature="3319:3330" ph="..." />
-                <marker date="1582437134612" expanded="false" signature="3390:3401" ph="..." />
-                <marker date="1582437134612" expanded="false" signature="3480:3493" ph="..." />
-                <marker date="1582437134612" expanded="false" signature="3579:3592" ph="..." />
-                <marker date="1582437134612" expanded="false" signature="3679:3691" ph="..." />
-                <marker date="1582437134612" expanded="false" signature="3856:3867" ph="..." />
-              </folding>
+            <state relative-caret-position="-360">
+              <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,8 +47,8 @@
       <file leaf-file-name="Email.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="510">
+              <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
                 <element signature="e#7#94#0#PHP" expanded="true" />
                 <element signature="e#278#312#0#PHP" expanded="true" />
@@ -67,18 +60,8 @@
       <file leaf-file-name="PHPMailer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Phpmailer/src/PHPMailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="1434" column="28" selection-start-line="1434" selection-start-column="28" selection-end-line="1434" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InputValidation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/InputValidation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="163">
+              <caret line="82" column="54" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -87,7 +70,7 @@
       <file leaf-file-name="EmailForm.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/EmailForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="363">
               <caret line="44" column="50" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="50" />
               <folding />
             </state>
@@ -97,8 +80,8 @@
       <file leaf-file-name="Quill.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Quill.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="384">
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
               </folding>
@@ -120,20 +103,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/autoload.php" />
-        <option value="$PROJECT_DIR$/functions/functions.php" />
         <option value="$PROJECT_DIR$/views/modals.php" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/classes/CsvValidation.php" />
         <option value="$PROJECT_DIR$/classes/Csv.php" />
         <option value="$PROJECT_DIR$/classes/File.php" />
-        <option value="$PROJECT_DIR$/classes/InputValidation.php" />
         <option value="$PROJECT_DIR$/classes/FileValidation.php" />
-        <option value="$PROJECT_DIR$/models/EmailForm.php" />
-        <option value="$PROJECT_DIR$/classes/Quill.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/classes/Email.php" />
+        <option value="$PROJECT_DIR$/views/email_client.view.php" />
+        <option value="$PROJECT_DIR$/classes/Quill.php" />
+        <option value="$PROJECT_DIR$/models/EmailForm.php" />
+        <option value="$PROJECT_DIR$/classes/InputValidation.php" />
+        <option value="$PROJECT_DIR$/functions/functions.php" />
         <option value="$PROJECT_DIR$/process_form.php" />
+        <option value="$PROJECT_DIR$/classes/Email.php" />
       </list>
     </option>
   </component>
@@ -206,15 +190,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email_helper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email_helper" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Phpmailer" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,6 +221,11 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view_components/email_client" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -278,12 +273,12 @@
       <option name="presentableId" value="Default" />
       <updated>1582264280083</updated>
       <workItem from="1582264282303" duration="4032000" />
-      <workItem from="1582309156313" duration="23022000" />
+      <workItem from="1582309156313" duration="27128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27054000" />
+    <option name="totallyTimeSpent" value="31160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="41" width="1179" height="675" extended-state="0" />
@@ -393,16 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="229" column="22" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/modals.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -471,10 +456,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/email_client.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/InputValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Quill.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="384">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
           </folding>
@@ -483,32 +497,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/EmailForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="363">
           <caret line="44" column="50" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/InputValidation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Phpmailer/src/PHPMailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="1434" column="28" selection-start-line="1434" selection-start-column="28" selection-end-line="1434" selection-end-column="28" />
+        <state relative-caret-position="163">
+          <caret line="82" column="54" selection-start-line="82" selection-start-column="32" selection-end-line="82" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state relative-caret-position="510">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
           <folding>
             <element signature="e#7#94#0#PHP" expanded="true" />
             <element signature="e#278#312#0#PHP" expanded="true" />
@@ -518,25 +532,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
             <element signature="e#6#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-          <folding>
-            <marker date="1582437134612" expanded="false" signature="3319:3330" ph="..." />
-            <marker date="1582437134612" expanded="false" signature="3390:3401" ph="..." />
-            <marker date="1582437134612" expanded="false" signature="3480:3493" ph="..." />
-            <marker date="1582437134612" expanded="false" signature="3579:3592" ph="..." />
-            <marker date="1582437134612" expanded="false" signature="3679:3691" ph="..." />
-            <marker date="1582437134612" expanded="false" signature="3856:3867" ph="..." />
           </folding>
         </state>
       </provider>

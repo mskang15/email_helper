@@ -10,7 +10,6 @@ class Quill {
     public static function generateHtmlWithText($text){
         $text_arr = json_decode($text, true);
 
-        var_dump($text_arr);
         $html_builder = "";
         $text_builder = "";
         foreach($text_arr["ops"] as $txt_a) {
@@ -50,8 +49,6 @@ class Quill {
         }
         $html_builder = preg_replace("/<br><br>$/", "", $html_builder);
         $text_builder = preg_replace("/\n$/", "", $text_builder);
-        var_dump($html_builder);
-        die;
 
         return [$html_builder, $text_builder];
     }
