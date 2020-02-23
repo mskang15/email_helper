@@ -27,9 +27,9 @@ switch($method){
         $email_form->setField("recipients", $recipients);
         //TODO: process the content, finish email, display the modal report
         //finish email
-        $email_result = Email::sendEmail($emailForm);
-        
-        die;
+        $email_result_arr = Email::sendEmail($emailForm);
+        $resultarray = Email::generateEmailReport($email_result_arr);
+        apiResponse($resultarray, "csv", 200);
         break;
     case "GET":
         //TODO: show how many contacts will be processed

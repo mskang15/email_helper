@@ -29,17 +29,18 @@ class Email
         $body = $emailForm->getField("content")["val"];
 
         //for the report
-        $success = 0;
-        $failure = 0;
+        $email_result_arr = [];
 
         foreach($recipients as $recipient){
             if(self::send($subject, $from, $from_email, $recipient, $body)){
-                $success++;
+                // $success++;
+                $email_result_arr[] = [$recipient["name"], $recipient["email_address"], "sent"];
             } else {
-                $failure++;
+                // $failure++;
+                $email_result_arr[] = [$recipient["name"], $recipient["email_address"], "failed"];
             }
         }
-        return [$success, $failure, $failed_emails];
+        return $email_result_arr;
     }
     
     private static function send($subject, $from, $from_email, $recipient, $body) {
@@ -57,7 +58,7 @@ class Email
             $mail->AltBody = $text_body;
             if(!$mail->send()){
                 // throw new Exception("something went wrong with sending the email");
-                $this->$failed_emails[] = $recipient["email_address"];
+                // $this->$failed_emails[] = $recipient["email_address"];
                 return false;
             }
             return true;
@@ -67,7 +68,12 @@ class Email
         }
     }
 
-    public static function createEmailReport($report_array) {
+    public static function generateEmailReport($report_array) {
+        $resultarray = [];
+        $success_emails = $report_array[0];
+        $failure_emails = $report_array[1];
+
+        
 
     }
 
