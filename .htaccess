@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{QUERY_STRING} /?author   [NC]
+RewriteRule .* - [F]
+</IfModule>

@@ -102,6 +102,8 @@ class Email
                 }
             }
 
+            error_log(print_r($mail, true));
+
             if(!$res = $mail->send()){
                 error_log("not sent!");
                 // throw new Exception("something went wrong with sending the email");

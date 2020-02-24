@@ -81,6 +81,7 @@
             });
             $("#editor").val(JSON.stringify(quill.getContents()));
             fd.append("content", $("#editor").val());
+            fd.append("recipient_count", true);
 
             $.ajax({
                 url: "./process_form.php",

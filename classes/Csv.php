@@ -10,7 +10,7 @@ class CsvException extends Exception {}
 
 class Csv
 {
-    public static function createArrayBasedOnCsv($file, $error_arr) {
+    public static function createArrayBasedOnCsv($file, $error_arr=[]) {
         $array = [];
         $i = 0;
         $headings = [];
