@@ -1,6 +1,58 @@
-<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteCond %{QUERY_STRING} /?author   [NC]
-RewriteRule .* - [F]
-</IfModule>
+
+# Turn on  
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^process-form/(.*)?    process_form.php?a=$1 [L,QSA]
+RewriteRule ^process-form           process_form.php [L,QSA]
+#RewriteRule ^good/(.*)     process_form.php?good=$1 [L,QSA]
+#RewriteRule ^support/api$           _io/api.php [L,QSA]
+#RewriteRule ^support/login$             _io/auth.php [L,QSA]
+
+#RewriteRule ^dashboard$               index.php?p=dashboard [L,QSA]
+#RewriteRule ^dashboard/(.*)$            index.php?p=$1 [L,QSA]
+#
+#RewriteRule ^csv-parser$            _lib/csv/csv.class.php [L,QSA]
+
+RewriteRule ^authorform$      _io/authorform.php [NC,L]
+
+RewriteRule ^process-authorform$      _lib/forms/authorform.class.php [L,QSA]
+RewriteRule ^resend$      _lib/forms/resend.php [L,QSA]
+
+#RewriteRule ^remove-response    _lib/db/remove-response.php
+#RewriteRule ^update-settings    _lib/settings/update-settings.php
+RewriteRule ^process-tax-file    _lib/forms/process-tax-file.php
+#RewriteRule ^export-to-csv    _lib/db/export-to-csv.php
+#RewriteRule ^forms/settings               _pages/settings_update_author_list.form.php [L,QSA]
+#RewriteRule ^forms/author-search               _pages/author_search.form.php [L,QSA]
+RewriteRule ^process-author-info-form          _lib/forms/author_info.php [L,QSA]
+
+#RewriteRule ^api/v(.*)/(.*)\.(.*)        _io/api.php?v=$1&a=$2&r=$3 [L,QSA]
+#RewriteRule ^api/v(.*?)/(.*)             _io/api.php?v=$1&a=$2&r=json [L,QSA]
+
+
+<Files *.inc.php>
+    deny from all
+</Files>
+
+<Files *.tpl.php>
+    deny from all
+</Files>
+
+<Files *.tpl>
+    deny from all
+</Files>
+
+<Files *.sql>
+    deny from all
+</Files>
+
+
+
+#php_value memory_limit 256M
+
+#php_value error_reporting E_ALL & ~E_DEPRECATED & ~E_NOTICE
+#php_value display_errors 0

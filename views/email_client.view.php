@@ -14,11 +14,11 @@
         </div>
         <div class="form-group">
             <label for="from">From</label>
-            <input type="text" class="form-control" id="from" name="from" placeholder="Write Sender's name" required required autocomplete="off">
+            <input type="text" class="form-control" id="from" name="from" placeholder="Write Sender's name" required autocomplete="off">
         </div>
         <div class="form-group">
             <label for="from_email">From Email</label>
-            <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write Sender's email" required required autocomplete="off">
+            <input type="email" class="form-control" id="from_email" name="from_email" placeholder="Write Sender's email" required autocomplete="off">
         </div>
         <div class="form-group" style="float:left;">
             <label for="recipients">Recipients</label>
@@ -56,6 +56,33 @@
         }
     });
 
+    function processFormAjax(fd) {
+        $.ajax({
+            url: "./process-form",
+            enctype: 'multipart/form-data',
+            method: 'POST',
+            processData: false,  // Important!
+            contentType: false,
+            cache: false,
+            data: fd,
+            success:function(data){
+                var html = "<table class='table table-striped'><tr><th>Name</th><th>Email</th><th>Result</th></tr>";
+                $(data["info"]).each(function(index, el){
+                    html += "<tr><td>"+el["name"]+"</td><td>"+el["email_address"]+"</td>"+"<td>"+el["result"]+"</td></tr>"
+                });
+                html += "</table>";
+
+                $(".result-modal-body").html(html);
+                $('#result').modal();
+
+            },
+            error: function(res) {
+                var message = getErrorMessageForAlert(res);
+                $(".alert-danger").text(message).slideDown();
+            }
+        });
+    }
+
     $(function(){
         $(".alert").click(function(){
             $(this).slideUp();
@@ -81,18 +108,22 @@
             });
             $("#editor").val(JSON.stringify(quill.getContents()));
             fd.append("content", $("#editor").val());
-            fd.append("recipient_count", true);
 
             $.ajax({
-                url: "./process_form.php",
+                url: "./process-form/count-recipients",
                 enctype: 'multipart/form-data',
                 method: 'POST',
                 processData: false,  // Important!
                 contentType: false,
                 cache: false,
                 data: fd,
-                success:function(){
-
+                success:function(data){
+                    $(".modal-body").html("<p>"+data+" recipients will receive the email. Do you want to continue?</p>");
+                    $('#confirmation').modal();
+                    $("#continue").click(function(){
+                        $(".modal-close").click();
+                        processFormAjax(fd);
+                    });
                 },
                 error: function(res) {
                     var message = getErrorMessageForAlert(res);
