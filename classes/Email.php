@@ -81,13 +81,20 @@ class Email
             $mail->addAddress($recipient["email_address"], $recipient["name"]);
             $mail->Subject = $subject;
 
+            //for testing email delveriability
+//            $is_html = false;
+
             if($is_html){
                 $mail->isHTML(true);
             }
 
             if(is_array($body)){
-                $mail->Body = $body[0]; // html body
-                $mail->AltBody = $body[1]; // text body
+                if(!$is_html){
+                    $mail->Body = $body[1]; // text body
+                } else {
+                    $mail->Body = $body[0]; // html body
+                    $mail->AltBody = $body[1]; // text body
+                }
             } else {
                 $mail->Body = $body; // only text body
             }
