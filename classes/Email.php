@@ -33,8 +33,8 @@ class Email
 
         foreach($recipients as $recipient){
             // populate {user_defined_field}
-            $body = self::prepareEmailTemplate($body, $recipient);
-            if(self::send($subject, $from, $from_email, $recipient, $body, $is_html, $attachments)){
+            $updated_body = self::prepareEmailTemplate($body, $recipient);
+            if(self::send($subject, $from, $from_email, $recipient, $updated_body, $is_html, $attachments)){
                 $email_result_arr[] = [
                     "name" => $recipient["name"],
                     "email_address" => $recipient["email_address"],

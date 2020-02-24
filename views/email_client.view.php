@@ -56,6 +56,8 @@
         }
     });
 
+    let fd = new FormData();
+
     function processFormAjax(fd) {
         $.ajax({
             url: "./process-form",
@@ -90,9 +92,8 @@
 
         $("#email_form").submit(function(e){
             e.preventDefault();
+            fd = new FormData();
             $(".alert").hide();
-
-            var fd = new FormData();
             $("#email_form input").each(function(index, el){
                 if($(el).attr("type") !== "submit"){
                     if($(el).attr("type") === "file"){
@@ -120,10 +121,10 @@
                 success:function(data){
                     $(".modal-body").html("<p>"+data+" recipients will receive the email. Do you want to continue?</p>");
                     $('#confirmation').modal();
-                    $("#continue").click(function(){
-                        $(".modal-close").click();
-                        processFormAjax(fd);
-                    });
+//                    $("#continue").click(function(){
+//                        $(".modal-close").click();
+//                        processFormAjax(fd);
+//                    });
                 },
                 error: function(res) {
                     var message = getErrorMessageForAlert(res);
@@ -131,6 +132,12 @@
                 }
             });
         });
+
+        $("#continue").click(function(){
+            $(".modal-close").click();
+            processFormAjax(fd);
+        });
+
 
 //        var formdata = $("#apif-download-form").serialize();
 //        var geturl = '/api/v2.0/modules/settings_update_author_list/export-to-csv.csv?' + formdata;
